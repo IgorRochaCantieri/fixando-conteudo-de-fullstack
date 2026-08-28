@@ -8,7 +8,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>Exercicios com raio</h1>
+        <h1 class="text-success">Exercicios com radio</h1>
+
+        <div class="row" mb-3>
+            <h2>Selecione um radio buttom e clique em enviar</h2>
+        </div>
+
+        <!--A tag <form> da sentido de formulário ao conjunto de elementos dentro dele-->
+        <!-- O atributo action (action="") dentro do form define o destino para onde os dados do formulário serão enviados quando ele for submetido-->
+        <form action="">
+            <div class="row">
+                <p>Genero</p>
+
+                <!-- O atributo type define o tipo input do formulário -->
+                <!-- O atributo name (name="") define o nome do grupo do input, e nesse caso como todos os inputs pertencem ao mesmo grupo o usuário só poderá selecionar apenas um campo-->
+                <!-- O atributo value (value="") define o valor deste input, que poderá ser acessado pelo Javascript -->
+                <div><input type="radio" name="gender" value="Masculino">Masculino</div>
+                <div><input type="radio" name="gender" value="Feminino">Masculino</div>
+                <div class="mb-3"><input type="radio" name="gender" value="Outros"></div>
+
+                <div><button type="button" onclick="displayRadioValue()">Enviar</button></div>
+            </div>
+        </form>
+
+        <div class="row">
+            <p>Genero:</p>
+
+            <!--Utilizamos o mesmo valor de name para todos os botões para que o usuário possa selecionar apenas uma opção no formulário ex: (name="gender") pois eles fazem parte do mesmo grupo -->
+
+            <div><input type="radio" name="gender" value="Masculino"> Masculino</div>
+            <div><input type="radio" name="gender" value="Feminino"> Feminino</div>
+            <div class="mb-3"><input type="radio" name="gender" value="Outros"> Outros</div>
+        </div>
+
+        <div>
+            <!--type define o tipo de botão, sendo button um tipo de botão comum ex:(type="buttom")-->
+
+            <!--onclick é um evento html, quando o elemento button for clicado a função displayRadioValue() será executada-->
+            <button type="button" onclick="displayRadioValue()">Enviar</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
